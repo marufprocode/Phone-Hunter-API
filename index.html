@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Hunter Api</title>
+    <link rel="stylesheet" href="./Bootstrap/bootstrap.min.css">
+</head>
+<body>
+    <header>
+        <h1 class="text-center">Get your phones information</h1>
+    </header>
+    <section class="container">
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Search by phone names" id="search-Fld">
+            <button class="input-group-text" id="btn-search">Search</button>
+        </div>
+        <div>
+            <h3 id="search-message" class="text-center text-danger d-none">No Phone Found, try another search</h3>
+        </div>
+        <div class="d-flex justify-content-center d-none" id="load-spinner">
+            <div class="spinner-border" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+          </div>
+        <div id="phone-container" class="row row-cols-1 row-cols-md-3 row-cols-xxl-4 g-4">
+        </div>
+        <div id="btn-showAll" class="d-flex justify-content-center mb-3 mt-3 d-none">
+            <button class="btn btn-primary">
+                Show All
+            </button>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="phoneDetailsModal" tabindex="-1" aria-labelledby="phoneDetailsModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="phoneDetailsModalLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="modal-inner">
+                    <!-- ... <p><span class="fw-bold">Name: </span><span>Oppo</span></p> -->
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Script Linking  -->
+    <script src="./Bootstrap/bootstrap.min.js"></script>
+    <script src="./JS/phone.js"></script>
+</body>
+</html>
